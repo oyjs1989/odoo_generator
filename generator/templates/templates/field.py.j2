@@ -1,0 +1,25 @@
+    {% for field in fields %}
+    {{ field.name }} = fields.{{ field.ttype|capitalize }}(
+        string=_("{{ field.field_description }}"),
+        required={{ field.required }},
+        readonly={{ field.readonly }}
+        {% if field.size %}
+        ,size={{ field.size }},
+        {% endif %}
+        {% if field.helper %}
+        ,help=_("{{ field.helper }}"),
+        {% endif %}
+        {% if field.index %}
+        ,size={{ field.index }},
+        {% endif %}
+        {% if field.store %}
+        ,size={{ field.store }},
+        {% endif %}
+        {% if field.size %}
+        ,size={{ field.size }},
+        {% endif %}
+        {% if field.size %}
+        ,size={{ field.size }},
+        {% endif %}
+    )
+    {% endfor %}

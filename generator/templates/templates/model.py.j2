@@ -1,0 +1,9 @@
+class {{ model.name }}(models.Model):
+    {% if model.state == 'base' %}
+    _name = "{{ model.model }}"
+    {% else %}
+    _inherit = "{{ model.model }}"
+    {% endif %}
+    {% if description %}
+    _description = "{{ description }}"
+    {% endif %}

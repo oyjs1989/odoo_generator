@@ -1,0 +1,2 @@
+model = [('module', None), ('name', '1'), ('table_name', '2'), ('description', '6'), ('rec_name', '3'), ('auto', None), ('inherit', '4'), ('orderby', None)]
+field = [('name', '1'), ('string', None), ('model_name', None), ('module', None), ('help', None), ('comodel_name', '0'), ('related', '-'), ('groups', None), ('inverse', '5'), ('compute', '6'), ('is_copy', 0), ('is_index', 0), ('is_required', 0), ('is_readonly', 0), ('is_store', 0)]

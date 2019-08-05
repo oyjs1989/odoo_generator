@@ -1,0 +1,9 @@
+    {% for func in funcs %}
+    @api.muitl
+    def {{ func.name }}(self):
+        '''
+        {{ func.description }}
+        '''
+        pass
+
+    {% endfor %}
