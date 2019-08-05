@@ -1,1 +1,1 @@
-# pyqt_demo
+# odoo generator
