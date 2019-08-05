@@ -3,14 +3,15 @@
 
 
 # Default = object()  # default value for __init__() methods
-from common.common import gModuls, gModels, gFields, sql_db
+from common.common import gModuls, gModels, gFields
+from db import sql_db
+from generator.generator import PyGenerator
 _required_tables = {
     'modules': ['name', 'website', 'data', 'summary', 'author', 'version', 'category_id', 'description',
                 'application', 'installable', 'license', 'sequence', 'auto_install'],
     'models': ['module', 'name', 'table_name', 'description', 'rec_name', 'auto', 'inherit', 'orderby'],
     'fields': ['name', 'string', 'model_name', 'module', 'help', 'comodel_name', 'related', 'groups',
                'inverse', 'compute', 'is_copy', 'is_index', 'is_required', 'is_readonly', 'is_store']}
-
 
 class Structure(object):
     _required = []
@@ -38,7 +39,12 @@ class Structure(object):
         return 'delete from %s' % self.table + 'where' + ','.join([' '.join(operating) for operating in self.domain])
 
     def select_sql(self):
-        return 'select * from %s' % self.table
+        return "select * from %s where name='%s'" % (self.table, self.name)
+
+    def replace_sql(self):
+        return "REPLACE INTO %s (%s) VALUES(%S); " % (
+        self.table, ','.join(['='.join(values) for values in self.serialization_tuple()]),
+        self.serialization_domain()).replace('None', 'null')
 
     def serialization_domain(self):
         return ','.join([' '.join(operating) for operating in self.domain])
@@ -59,7 +65,6 @@ class Structure(object):
         return True
 
     def create(self):
-        print(self.serialization_dict())
         ret = self.execute(self.insert_sql())
         return ret
 
@@ -71,6 +76,9 @@ class Structure(object):
         ret = self.execute(self.delete_sql())
         return ret
 
+    def save(self):
+        ret = self.execute(self.replace_sql())
+        return ret
 
 class Module(Structure):
     _models = []
@@ -316,20 +324,24 @@ class Cache(object):
     def get_attrs(self):
         return {field: getattr(self, field, None) for field in _required_tables[self.table]}
 
-
     def get_attrs_list(self):
         for table, fields in _required_tables.items():
             if table == self.table:
                 return [getattr(self, field, None) for field in fields]
 
+    def persistence(self):
+        if type(self._table_model[self.table]) == dict:
+             format = self._table_model[self.table][self.ttype](**self.get_attrs())
+        else:
+            format = self._table_model[self.table](**self.get_attrs())
+        format.save()
+
     def to_object(self):
-        print(self.get_attrs())
         if not self.table:
             raise ValueError('Need table')
         if type(self._table_model[self.table]) == dict:
             return self._table_model[self.table][self.ttype](**self.get_attrs())
         return self._table_model[self.table](**self.get_attrs())
-
 
     def __iter__(self):
         self.cursor = 0
@@ -342,8 +354,13 @@ class Cache(object):
         else:
             raise StopIteration
 
+    def generate(self):
+        if self.table == 'model':
+            PyGenerator()
 
-def initialize_all_data():
+
+
+def preheat_cache():
     for table, fields in _required_tables.items():
         sql = "select %s from %s" % (','.join(fields), table)
         sql_db.cursor.execute(sql)
@@ -355,7 +372,7 @@ def allocating_data(table, records):
     if table == 'modules':
         for record in records:
             name, website, data, summary, author, version, category_id, description, application, installable, license, sequence, auto_install = record
-            gModuls[name] = Module(name=name, website=website, data=data, summary=summary, author=author,
+            gModuls[name] = Cache(name=name, website=website, data=data, summary=summary, author=author,
                                    version=version,
                                    category_id=category_id, description=description, application=application,
                                    installable=installable, license=license, sequence=sequence,
@@ -363,13 +380,13 @@ def allocating_data(table, records):
     elif table == 'models':
         for record in records:
             module, name, table_name, description, rec_name, auto, inherit, orderby = record
-            gModels[name] = Model(module=module, name=name, table_name=table_name, description=description,
+            gModels[name] = Cache(module=module, name=name, table_name=table_name, description=description,
                                   rec_name=rec_name, auto=auto, inherit=inherit, orderby=orderby)
             gModuls[module]._models.append(gModels[name])
     elif table == 'fields':
         for record in records:
             name, string, model_name, module, help, comodel_name, related, groups, inverse, compute, copy, index, required, readonly, store = record
-            gFields[name] = Field(name=name, string=string, model_name=model_name, module=module, help=help,
+            gFields[name] = Cache(name=name, string=string, model_name=model_name, module=module, help=help,
                                   comodel_name=comodel_name, related=related, groups=groups, inverse=inverse,
                                   compute=compute, is_copy=copy, is_index=index, is_required=required,
                                   is_readonly=readonly, is_store=store)
@@ -377,8 +394,9 @@ def allocating_data(table, records):
     else:
         raise ValueError('Not expected table')
 
+# def preheat_cache(table, records):
 
-initialize_all_data()
+preheat_cache()
 
 if __name__ == '__main__':
     s = Field(**{'name': '1', 'compute': '-', 'inverse': '5', 'string': 'string', 'module': 'module',

@@ -26,7 +26,6 @@ class CommonWidget(object):
     cache = None
     subordinate = []
 
-
     def get_attr(self):
         return {k: getattr(self, k, None) for k in dir(self) if not k.startswith('__')}
 
@@ -83,6 +82,10 @@ class CommonWidget(object):
             item = tablewiget.horizontalHeaderItem(column)
             item.setText(_translate("model", itemname))
 
+    def generate(self):
+        # retrieve data
+        pass
+
 
 class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow, CommonWidget):
     table = 'modules'
@@ -108,7 +111,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow, CommonWidget):
 
     def save_cache(self):
         self.cache = Cache(**self.attr_text())
-        self.cache.to_object().create()
+        self.cache.persistence()
 
     def generate(self):
         pass
@@ -136,7 +139,7 @@ class ModelWindow(QtWidgets.QMainWindow, Ui_model, CommonWidget):
 
     def save_cache(self):
         self.cache = Cache(**self.attr_text())
-        self.cache.to_object().create()
+        self.cache.persistence()
 
     def generate_code(self):
         self.cache.fields = self.subordinate
@@ -144,7 +147,8 @@ class ModelWindow(QtWidgets.QMainWindow, Ui_model, CommonWidget):
         generator.py_generator()
 
 
-class FieldQDialog(QtWidgets.QDialog, Ui_field,CommonWidget):
+class FieldQDialog(QtWidgets.QDialog, Ui_field, CommonWidget):
+
     table = 'fields'
 
     def __init__(self, model):
@@ -245,8 +249,7 @@ class FieldQDialog(QtWidgets.QDialog, Ui_field,CommonWidget):
         kwargs = self.attr_text()
         kwargs.update({model_name: model_name})
         self.cache = Cache(**kwargs)
-        self.cache.to_object()
-        self.cache.to_object().create()
+        self.cache.persistence()
         self.superior.subordinate.append(self)
         data = self.cache.get_attrs_list()
         self.superior.insert_tablewidget(data, self.superior.tableWidget)

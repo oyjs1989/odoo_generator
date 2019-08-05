@@ -23,13 +23,13 @@ class Sqlite(object):
                    'inverse', 'compute', 'is_copy', 'is_index', 'is_required', 'is_readonly', 'is_store']}
 
     _init_table = {
-        'modules': ['name CHAR(100)', 'website CHAR(100)', 'data TEXT', 'summary TEXT', 'author CHAR(100)',
+        'modules': ['name CHAR(100) UNIQUE', 'website CHAR(100)', 'data TEXT', 'summary TEXT', 'author CHAR(100)',
                     'version CHAR(100)', 'category_id int', 'description TEXT',
                     'application BOOLEAN', 'installable BOOLEAN', 'license CHAR(100)', 'sequence int',
                     'auto_install BOOLEAN'],
-        'models': ['module CHAR(100)', 'name CHAR(100)', 'table_name CHAR(100)', 'description TEXT',
+        'models': ['module CHAR(100)', 'name CHAR(100) UNIQUE', 'table_name CHAR(100)', 'description TEXT',
                    'rec_name CHAR(100)', 'auto BOOLEAN', 'inherit CHAR(255)', 'orderby  CHAR(255)'],
-        'fields': ['name CHAR(100)', 'string CHAR(100)', 'model_name CHAR(100)', 'module CHAR(100)', 'help TEXT',
+        'fields': ['name CHAR(100) UNIQUE', 'string CHAR(100)', 'model_name CHAR(100)', 'module CHAR(100)', 'help TEXT',
                    'comodel_name CHAR(100)', 'related CHAR(100)', 'groups CHAR(100)',
                    'inverse CHAR(100)', 'compute CHAR(100)', 'is_copy BOOLEAN', 'is_index BOOLEAN',
                    'is_required BOOLEAN', 'is_readonly BOOLEAN', 'is_store BOOLEAN']}

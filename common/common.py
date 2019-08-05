@@ -12,9 +12,6 @@
 
 # - Custom package
 
-from db.sql_db import sql_db
-
-
 global gModuls, gModels, gFields, gField_type
 gModuls = {}
 gModels = {}

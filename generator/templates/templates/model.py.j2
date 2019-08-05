@@ -1,9 +1,20 @@
 class {{ model.name }}(models.Model):
     {% if model.state == 'base' %}
-    _name = "{{ model.model }}"
-    {% else %}
-    _inherit = "{{ model.model }}"
+    _name = "{{ model.table_name }}"
     {% endif %}
-    {% if description %}
-    _description = "{{ description }}"
+    {% if model.inherit %}
+    _inherit = "{{ model.inherit }}"
     {% endif %}
+    {% if model.description %}
+    _description = "{{ model.description }}"
+    {% endif %}
+    {% if model.rec_name %}
+    _rec_name = "{{ model.rec_name }}"
+    {% endif %}
+    {% if model.auto %}
+    _auto = "{{ model.auto }}"
+    {% endif %}
+    {% if model.orderby %}
+    _order = "{{ model.orderby }}"
+    {% endif %}
+
