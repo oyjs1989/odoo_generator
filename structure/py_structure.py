@@ -4,14 +4,22 @@
 
 # Default = object()  # default value for __init__() methods
 from common.common import gModuls, gModels, gFields
-from db import sql_db
-from generator.generator import PyGenerator
-_required_tables = {
+from db.sql_db import sql_db
+from generator.generator import Generator
+_REQUIRED_TABLES = {
     'modules': ['name', 'website', 'data', 'summary', 'author', 'version', 'category_id', 'description',
                 'application', 'installable', 'license', 'sequence', 'auto_install'],
     'models': ['module', 'name', 'table_name', 'description', 'rec_name', 'auto', 'inherit', 'orderby'],
     'fields': ['name', 'string', 'model_name', 'module', 'help', 'comodel_name', 'related', 'groups',
                'inverse', 'compute', 'is_copy', 'is_index', 'is_required', 'is_readonly', 'is_store']}
+
+_GENERATE_REQUIRED = {
+    'modules': ['name', 'website', 'data', 'summary', 'author', 'version', 'category_id', 'description',
+                'application', 'installable', 'license', 'sequence', 'auto_install', 'models',],
+    'models': ['module', 'name', 'table_name', 'description', 'rec_name', 'auto', 'inherit', 'fields', 'orderby'],
+    'fields': ['name', 'string', 'model_name', 'module', 'help', 'comodel_name', 'related', 'groups',
+               'inverse', 'compute', 'is_copy', 'is_index', 'is_required', 'is_readonly', 'is_store']
+}
 
 class Structure(object):
     _required = []
@@ -43,8 +51,8 @@ class Structure(object):
 
     def replace_sql(self):
         return "REPLACE INTO %s (%s) VALUES(%S); " % (
-        self.table, ','.join(['='.join(values) for values in self.serialization_tuple()]),
-        self.serialization_domain()).replace('None', 'null')
+            self.table, ','.join(values[0] for values in self.serialization_tuple()),
+            ','.join(values[1] for values in self.serialization_tuple()))
 
     def serialization_domain(self):
         return ','.join([' '.join(operating) for operating in self.domain])
@@ -300,7 +308,7 @@ class Cache(object):
     }
     _requierd = []
     _default = ()
-
+    _generate = False
     _tables = {
         'modules': {},
         'models': {},
@@ -322,10 +330,10 @@ class Cache(object):
             setattr(self, k, v)
 
     def get_attrs(self):
-        return {field: getattr(self, field, None) for field in _required_tables[self.table]}
+        return {field: getattr(self, field, None) for field in _REQUIRED_TABLES[self.table]}
 
     def get_attrs_list(self):
-        for table, fields in _required_tables.items():
+        for table, fields in _REQUIRED_TABLES.items():
             if table == self.table:
                 return [getattr(self, field, None) for field in fields]
 
@@ -348,25 +356,52 @@ class Cache(object):
         return self
 
     def __next__(self):
-        if self.cursor < len(_required_tables[self.table]):
+        if self.cursor < len(_REQUIRED_TABLES[self.table]):
             self.cursor += 1
-            return _required_tables[self.table][self.cursor], getattr(self, _required_tables[self.table][self.cursor], None)
+            return _REQUIRED_TABLES[self.table][self.cursor], getattr(self, _REQUIRED_TABLES[self.table][self.cursor], None)
         else:
             raise StopIteration
 
-    def generate(self):
-        if self.table == 'model':
-            PyGenerator()
+    def _check_generate_required(self):
+        if not self._generate:
+            return False
+        requierds = _GENERATE_REQUIRED[self.table]
+        for requierd in requierds:
+            if not hasattr(self, requierd):
+                return False
+        return True
 
+    def get_generate_argv(self):
+        access = self._check_generate_required()
+        if not access:
+            return None
+        requierds = _GENERATE_REQUIRED[self.table]
+        argv = {}
+        for requierd in requierds:
+            arg = getattr(self, requierd)
+            if isinstance(arg, Cache):
+                value = arg.get_generate_argv()
+                if value:
+                    argv.update({value.table: value})
+            else:
+                argv.update({requierd: getattr(self, requierd)})
+        return argv
 
+    def generate(self, PATH):
+        '''
+        modules models data security views report wizard controllers
+        :return:
+        '''
+        g = Generator(PATH)
+        args = self.get_generate_argv()
+        g.generate_all(args)
 
 def preheat_cache():
-    for table, fields in _required_tables.items():
+    for table, fields in _REQUIRED_TABLES.items():
         sql = "select %s from %s" % (','.join(fields), table)
         sql_db.cursor.execute(sql)
         sql_data = sql_db.cursor.fetchall()
         allocating_data(table, sql_data)
-
 
 def allocating_data(table, records):
     if table == 'modules':

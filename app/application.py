@@ -10,12 +10,12 @@ from ui.fields import Ui_field
 from ui.model import Ui_model
 import types
 # - import structure
-from generator.generator import Generator
+
 
 # - Third party module of python
 from PyQt5 import QtGui, QtWidgets
 from PyQt5.QtCore import pyqtSlot,QCoreApplication
-from structure.py_structure import gModuls, gModels, gFields, Cache, _required_tables
+from structure.py_structure import gModuls, gModels, gFields, Cache, _REQUIRED_TABLES
 
 # - Custom package
 
@@ -45,7 +45,8 @@ class CommonWidget(object):
         return self.get_widget_fun(QtWidgets.QComboBox, 'currentText')
 
     def attr_text(self):
-        data = {{'table': self.table}}
+        print(self.table)
+        data = {'table': self.table}
         re_ql = self.qlineedit_text()
         re_qplt = self.qplaintextedit_text()
         re_qc = self.qcheckbox_text()
@@ -82,9 +83,9 @@ class CommonWidget(object):
             item = tablewiget.horizontalHeaderItem(column)
             item.setText(_translate("model", itemname))
 
-    def generate(self):
-        # retrieve data
-        pass
+    def generate_code(self):
+        directory = QtWidgets.QFileDialog.getExistingDirectory(self, "选取文件夹", "./")
+        g = self.cache.generate(directory)
 
 
 class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow, CommonWidget):
@@ -97,10 +98,11 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow, CommonWidget):
         self.cache = None
         self.save.clicked.connect(self.save_cache)
         self.add_model.clicked.connect(self.create_model)
+        self.generate.clicked.connect(self.create_model)
 
     def retranslateUi(self, Window):
         super(MainWindow, self).retranslateUi(Window)
-        self.set_tablewidget_headeritem(_required_tables['models'], self.tableWidget)
+        self.set_tablewidget_headeritem(_REQUIRED_TABLES['models'], self.tableWidget)
 
     def create_model(self):
         # if self.module.name == None:
@@ -113,7 +115,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow, CommonWidget):
         self.cache = Cache(**self.attr_text())
         self.cache.persistence()
 
-    def generate(self):
+    def generate_code(self):
         pass
 
 
@@ -131,7 +133,7 @@ class ModelWindow(QtWidgets.QMainWindow, Ui_model, CommonWidget):
 
     def retranslateUi(self, MainWindow):
         super(ModelWindow, self).retranslateUi(MainWindow)
-        self.set_tablewidget_headeritem(_required_tables['fields'], self.tableWidget)
+        self.set_tablewidget_headeritem(_REQUIRED_TABLES['fields'], self.tableWidget)
 
     def create_field(self):
         self.f = FieldQDialog(self)
@@ -140,11 +142,6 @@ class ModelWindow(QtWidgets.QMainWindow, Ui_model, CommonWidget):
     def save_cache(self):
         self.cache = Cache(**self.attr_text())
         self.cache.persistence()
-
-    def generate_code(self):
-        self.cache.fields = self.subordinate
-        generator = PyGenerator(self.cache)
-        generator.py_generator()
 
 
 class FieldQDialog(QtWidgets.QDialog, Ui_field, CommonWidget):

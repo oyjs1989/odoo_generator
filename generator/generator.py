@@ -35,7 +35,7 @@ class Generator(object):
         self.generate_structure(self, module_name)
         # 外部文件__mainfest__.py
         self.generate_mainfest(module)
-        self.generate_models(module.get('generate_models'))
+        self.generate_models(module.get('models'))
         self.generate_data(module.get('data'))
         self.generate_security(module.get('security'))
         self.generate_views(module.get('views'))

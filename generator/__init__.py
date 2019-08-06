@@ -12,4 +12,4 @@
 
 # - Custom package
 
-from .generator import PyGenerator
+from .generator import Generator
