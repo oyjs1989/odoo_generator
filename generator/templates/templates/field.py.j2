@@ -4,7 +4,7 @@
         required={{ field.is_required }},
         readonly={{ field.is_readonly }}
         {% if field.related %}
-        ,related={{ field.related }}
+        ,related='{{ field.related }}'
         {% endif %}
         {% if field.helper %}
         ,help=_("{{ field.helper }}")
@@ -16,10 +16,10 @@
         ,store={{ field.is_store }}
         {% endif %}
         {% if field.inverse %}
-        ,inverse={{ field.inverse }}
+        ,inverse='{{ field.inverse }}'
         {% endif %}
         {% if field.compute %}
-        ,compute={{ field.compute }}
+        ,compute='{{ field.compute }}'
         {% endif %}
         {% if field.is_copy %}
         ,copy={{ field.is_copy }}

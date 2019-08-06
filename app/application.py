@@ -10,7 +10,7 @@ from ui.fields import Ui_field
 from ui.model import Ui_model
 import types
 # - import structure
-from generator.generator import PyGenerator
+from generator.generator import Generator
 
 # - Third party module of python
 from PyQt5 import QtGui, QtWidgets

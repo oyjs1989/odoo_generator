@@ -4,16 +4,13 @@
     <list default="true" id="e974e047-153a-412d-8c6d-ac93ea1adad5" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generator/templates/templates/header.access.j2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/application.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/application.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/common.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/common.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/sql_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/db/sql_db.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/generator/generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/generator/generator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/generator/templates/templates/field.py.j2" beforeDir="false" afterPath="$PROJECT_DIR$/generator/templates/templates/field.py.j2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generator/templates/templates/function.py.j2" beforeDir="false" afterPath="$PROJECT_DIR$/generator/templates/templates/function.py.j2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generator/templates/templates/model.py.j2" beforeDir="false" afterPath="$PROJECT_DIR$/generator/templates/templates/model.py.j2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/local.db" beforeDir="false" afterPath="$PROJECT_DIR$/local.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/structure/py_structure.py" beforeDir="false" afterPath="$PROJECT_DIR$/structure/py_structure.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator/templates/templates/header.py.j2" beforeDir="false" afterPath="$PROJECT_DIR$/generator/templates/templates/header.py.j2" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,7 +38,7 @@
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="399">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
               <folding>
                 <element signature="e#194#228#0" expanded="true" />
               </folding>
@@ -52,11 +49,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/application.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1615">
-              <caret line="85" column="23" selection-start-line="85" selection-start-column="23" selection-end-line="85" selection-end-column="23" />
-              <folding>
-                <element signature="e#142#177#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-266">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
             </state>
           </provider>
         </entry>
@@ -64,12 +58,19 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/generator/generator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="104" column="36" selection-start-line="104" selection-start-column="36" selection-end-line="104" selection-end-column="36" />
+            <state relative-caret-position="-2360">
+              <caret line="35" column="29" lean-forward="true" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
               <folding>
                 <element signature="e#159#214#0" expanded="true" />
               </folding>
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/generator/templates/templates/__manifest__.py.j2">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-342" />
           </provider>
         </entry>
       </file>
@@ -83,28 +84,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/generator/py_code_19_08_05_17_18_45.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-573">
-              <caret line="22" column="8" lean-forward="true" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/generator/templates/templates/function.py.j2">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" column="20" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="20" />
+            <state relative-caret-position="76">
+              <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/jinja2/parser.py">
+        <entry file="file://$PROJECT_DIR$/generator/templates/templates/header.py.j2">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="129" selection-start-line="129" selection-end-line="129" />
+            <state relative-caret-position="133">
+              <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -112,20 +104,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/generator/templates/templates/field.py.j2">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="28">
-              <caret line="7" column="19" lean-forward="true" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/structure/py_structure.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="13" column="101" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="13" selection-end-column="101" />
-              <folding>
-                <element signature="e#109#160#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="76">
+              <caret line="4" column="37" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -141,13 +121,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>insert</find>
-      <find>try</find>
-      <find>_check_required</find>
-      <find>ttype</find>
-      <find>checkbox</find>
-      <find>save</find>
-      <find>itemData</find>
       <find>copy</find>
       <find>QTableWidgetItem</find>
       <find>tableWidget</find>
@@ -166,11 +139,18 @@
       <find>required</find>
       <find>string</find>
       <find>is_readonly</find>
-      <find>to</find>
-      <find>is_store</find>
       <find>name</find>
-      <find>orderby</find>
       <find>is_copy</find>
+      <find>is_store</find>
+      <find>out</find>
+      <find>fix_file</find>
+      <find>options</find>
+      <find>main</find>
+      <find>to</find>
+      <find>orderby</find>
+      <find>main(</find>
+      <find>models</find>
+      <find>generate_models</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -191,11 +171,16 @@
         <option value="$PROJECT_DIR$/structure/code_generator/generator.py" />
         <option value="$PROJECT_DIR$/db/sql_db.py" />
         <option value="$PROJECT_DIR$/common/common.py" />
-        <option value="$PROJECT_DIR$/app/application.py" />
         <option value="$PROJECT_DIR$/structure/py_structure.py" />
         <option value="$PROJECT_DIR$/generator/templates/templates/function.py.j2" />
-        <option value="$PROJECT_DIR$/generator/templates/templates/field.py.j2" />
         <option value="$PROJECT_DIR$/generator/templates/templates/model.py.j2" />
+        <option value="$PROJECT_DIR$/generator/py_code_19_08_05_18_18_02.py" />
+        <option value="$PROJECT_DIR$/generator/templates/templates/field.py.j2" />
+        <option value="$PROJECT_DIR$/generator/py_code_19_08_05_18_19_52.py" />
+        <option value="$PROJECT_DIR$/generator/templates/templates/header.py.j2" />
+        <option value="$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/autopep8.py" />
+        <option value="$PROJECT_DIR$/generator/templates/templates/header.access.j2" />
+        <option value="$PROJECT_DIR$/app/application.py" />
         <option value="$PROJECT_DIR$/generator/generator.py" />
       </list>
     </option>
@@ -222,16 +207,6 @@
             <path>
               <item name="odoo_generator" type="b2602c69:ProjectViewProjectNode" />
               <item name="odoo_generator" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="odoo_generator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="odoo_generator" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="odoo_generator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="odoo_generator" type="462c0819:PsiDirectoryNode" />
               <item name="generator" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -246,11 +221,6 @@
               <item name="generator" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="odoo_generator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="odoo_generator" type="462c0819:PsiDirectoryNode" />
-              <item name="logger" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -265,6 +235,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.externalTools" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -423,24 +394,26 @@
       <workItem from="1564649097037" duration="8345000" />
       <workItem from="1564708691351" duration="18376000" />
       <workItem from="1564967151566" duration="4678000" />
-      <workItem from="1564978714876" duration="12129000" />
+      <workItem from="1564978714876" duration="19579000" />
+      <workItem from="1565055066198" duration="1056000" />
+      <workItem from="1565062468013" duration="12168000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100230000" />
+    <option name="totallyTimeSpent" value="120904000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.52986217" visible="true" weight="0.2739872" />
-      <window_info id="Structure" order="1" sideWeight="0.47013783" side_tool="true" weight="0.25266525" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.27087575" visible="true" weight="0.2260128" />
+      <window_info id="Structure" order="1" sideWeight="0.7280164" side_tool="true" weight="0.2739872" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.37201735" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.42795232" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.25921908" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4273319" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -448,8 +421,8 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.329718" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32936078" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.3217768" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3286334" />
+      <window_info anchor="bottom" id="Python Console" order="12" visible="true" weight="0.47613883" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -467,7 +440,7 @@
     <SUITE FILE_PATH="coverage/odoo_code_generator$sql_db.coverage" NAME="sql_db Coverage Results" MODIFIED="1564061279766" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/db" />
     <SUITE FILE_PATH="coverage/odoo_code_generator$application.coverage" NAME="application Coverage Results" MODIFIED="1564653885989" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
     <SUITE FILE_PATH="coverage/odoo_code_generator$main.coverage" NAME="main Coverage Results" MODIFIED="1564974536096" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/odoo_generator$generator.coverage" NAME="generator Coverage Results" MODIFIED="1564996823551" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/generator" />
+    <SUITE FILE_PATH="coverage/odoo_generator$generator.coverage" NAME="generator Coverage Results" MODIFIED="1565078986716" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/generator" />
     <SUITE FILE_PATH="coverage/odoo_code_generator$py_structure.coverage" NAME="py_structure Coverage Results" MODIFIED="1564144577099" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/structure" />
   </component>
   <component name="debuggerHistoryManager">
@@ -510,254 +483,11 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ui/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/structure/data.txt" />
-    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/752538227/_sqlite3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1895">
-          <caret line="229" column="92" lean-forward="true" selection-start-line="229" selection-start-column="20" selection-end-line="229" selection-end-column="92" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/structure/AnalysisOdoo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-570" />
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/752538227/PyQt5/QtWidgets/QFormLayout.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="92" column="8" selection-start-line="92" selection-start-column="8" selection-end-line="92" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/752538227/PyQt5/QtWidgets/QMessageBox.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="155" column="8" selection-start-line="155" selection-start-column="8" selection-end-line="155" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/752538227/PyQt5/QtWidgets/QFrame.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/752538227/PyQt5/QtWidgets/QAbstractScrollArea.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/752538227/PyQt5/QtWidgets/QPlainTextEdit.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="508" column="74" lean-forward="true" selection-start-line="508" selection-start-column="30" selection-end-line="508" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/752538227/PyQt5/QtWidgets/QLineEdit.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="446" column="12" selection-start-line="446" selection-start-column="8" selection-end-line="446" selection-end-column="12" />
-          <folding>
-            <element signature="e#185#222#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/752538227/PyQt5/QtWidgets/QCheckBox.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="25" column="18" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui/fields.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2641">
-          <caret line="139" column="42" lean-forward="true" selection-start-line="139" selection-start-column="42" selection-end-line="139" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/752538227/PyQt5/QtWidgets/QTableWidget.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="209" column="8" selection-start-line="209" selection-start-column="8" selection-end-line="209" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui/model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="150" column="27" selection-start-line="150" selection-start-column="21" selection-end-line="150" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui/module.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="86" column="63" lean-forward="true" selection-start-line="86" selection-start-column="63" selection-end-line="86" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/structure/tmp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="18" selection-start-column="18" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/pkg_resources/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="358" selection-start-line="358" selection-end-line="358" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3/collections/__init__.pyi">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="29" lean-forward="true" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/jinja2/asyncsupport.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="75" selection-start-line="75" selection-end-line="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/py_code_19_08_02_18_16_58.py" />
-    <entry file="file://$PROJECT_DIR$/py_code_19_08_02_19_15_47.py" />
-    <entry file="file://$PROJECT_DIR$/data.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generator/templates/templates/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generator/templates/templates/header.py.j2">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generator/templates/templates/__manifest__.py.j2">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generator/templates/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generator/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/structure/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/sql_db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="67" selection-start-line="67" selection-end-line="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="e#194#228#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/common.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generator/py_code_19_08_05_16_43_13.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generator/py_code_19_08_05_16_46_28.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generator/py_code_19_08_05_16_49_02.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="14" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generator/py_code_19_08_05_16_52_50.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="25" column="8" lean-forward="true" selection-start-line="23" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generator/py_code_19_08_05_16_56_03.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-250">
-          <caret line="26" column="13" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/application.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1615">
-          <caret line="85" column="23" selection-start-line="85" selection-start-column="23" selection-end-line="85" selection-end-column="23" />
-          <folding>
-            <element signature="e#142#177#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generator/py_code_19_08_05_16_58_05.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-171" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generator/py_code_19_08_05_16_57_33.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="13" column="8" lean-forward="true" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generator/py_code_19_08_05_16_58_52.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/generator/py_code_19_08_05_16_52_50.py" />
+    <entry file="file://$PROJECT_DIR$/generator/py_code_19_08_05_16_56_03.py" />
+    <entry file="file://$PROJECT_DIR$/generator/py_code_19_08_05_16_58_05.py" />
+    <entry file="file://$PROJECT_DIR$/generator/py_code_19_08_05_16_57_33.py" />
+    <entry file="file://$PROJECT_DIR$/generator/py_code_19_08_05_16_58_52.py" />
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/jinja2/parser.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
@@ -772,6 +502,8 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/generator/py_code_19_08_05_17_18_45.py" />
+    <entry file="file://$PROJECT_DIR$/generator/py_code_19_08_05_17_20_24.py" />
     <entry file="file://$PROJECT_DIR$/structure/py_structure.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
@@ -782,10 +514,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/generator/py_code_19_08_05_17_18_45.py">
+    <entry file="file://$PROJECT_DIR$/common/common.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-573">
-          <caret line="22" column="8" lean-forward="true" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
+        <state relative-caret-position="342">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generator/py_code_19_08_05_18_18_02.py" />
+    <entry file="file://$PROJECT_DIR$/generator/py_code_19_08_05_18_19_52.py" />
+    <entry file="file://$PROJECT_DIR$/generator/py_code_19_08_05_18_26_46.py" />
+    <entry file="file://$PROJECT_DIR$/generator/py_code_19_08_05_18_20_33.py" />
+    <entry file="file://$PROJECT_DIR$/generator/py_code_19_08_05_18_27_19.py" />
+    <entry file="file://$PROJECT_DIR$/generator/py_code_19_08_05_18_28_38.py" />
+    <entry file="file://$PROJECT_DIR$/generator/py_code_19_08_05_18_29_26.py" />
+    <entry file="file://$PROJECT_DIR$/generator/py_code_19_08_05_18_53_26.py" />
+    <entry file="file://$PROJECT_DIR$/generator/py_code_19_08_05_19_10_57.py" />
+    <entry file="file://$PROJECT_DIR$/generator/py_code_19_08_05_18_53_44.py" />
+    <entry file="file://$PROJECT_DIR$/generator/py_code_19_08_05_19_03_27.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/black.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="3750" column="4" selection-start-line="3750" selection-start-column="4" selection-end-line="3750" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generator/py_code_19_08_05_19_21_56.py" />
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3/subprocess.pyi">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generator/py_code_19_08_05_19_23_34.py" />
+    <entry file="file://$PROJECT_DIR$/generator/py_code_19_08_05_19_39_22.py" />
+    <entry file="file://$PROJECT_DIR$/generator/py_code_19_08_05_19_39_58.py" />
+    <entry file="file://$PROJECT_DIR$/generator/py_code_19_08_05_19_40_06.py" />
+    <entry file="file://$PROJECT_DIR$/generator/py_code_19_08_05_19_41_17.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/typing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="2323" column="8" selection-start-line="2323" selection-start-column="8" selection-end-line="2323" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generator/py_code_19_08_05_19_45_21.py" />
+    <entry file="file://$PROJECT_DIR$/generator/py_code_19_08_05_19_45_35.py" />
+    <entry file="file://$PROJECT_DIR$/generator/py_code_19_08_05_19_52_49.py" />
+    <entry file="file://$PROJECT_DIR$/generator/py_code_19_08_05_20_04_41.py" />
+    <entry file="file://$PROJECT_DIR$/generator/py_code_19_08_05_20_07_05.py" />
+    <entry file="file://$PROJECT_DIR$/generator/py_code_19_08_05_20_07_18.py" />
+    <entry file="file://$PROJECT_DIR$/generator/py_code_19_08_05_20_09_25.py" />
+    <entry file="file://$PROJECT_DIR$/generator/py_code_19_08_05_20_09_42.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/autopep8.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="4165" column="23" lean-forward="true" selection-start-line="4165" selection-start-column="23" selection-end-line="4165" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -798,22 +582,72 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/generator/templates/templates/function.py.j2">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="20" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="20" />
+        <state relative-caret-position="76">
+          <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generator/templates/templates/header.py.j2">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/generator/templates/templates/field.py.j2">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="7" column="19" lean-forward="true" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+        <state relative-caret-position="76">
+          <caret line="4" column="37" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/752538227/nt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="326" column="4" selection-start-line="326" selection-start-column="4" selection-end-line="326" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generator/templates/templates/header.access.j2">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/ntpath.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="240" column="4" selection-start-line="240" selection-start-column="4" selection-end-line="240" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generator/templates/templates/__manifest__.py.j2">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-342" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="e#194#228#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/application.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-266">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/generator/generator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="104" column="36" selection-start-line="104" selection-start-column="36" selection-end-line="104" selection-end-column="36" />
+        <state relative-caret-position="-2360">
+          <caret line="35" column="29" lean-forward="true" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
           <folding>
             <element signature="e#159#214#0" expanded="true" />
           </folding>
